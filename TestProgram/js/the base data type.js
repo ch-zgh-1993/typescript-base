@@ -53,3 +53,9 @@ function infiniteLoop() {
 let someValue = 'this is a string';
 let strlength = someValue.length;
 strlength = someValue.length;
+// 变量声明
+for (let i = 0; i < 10; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, 100 * i);
+}

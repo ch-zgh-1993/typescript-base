@@ -65,3 +65,12 @@ declare function create(o: object | null): void;
 let someValue: any = 'this is a string';
 let strlength: number = (<string>someValue).length;
 strlength = (someValue as string).length;
+
+
+// 变量声明
+
+for(let i = 0; i < 10; i++) {
+	setTimeout(function() {
+		console.log(i);
+	}, 100 * i);
+}
