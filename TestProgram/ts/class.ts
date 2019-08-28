@@ -88,6 +88,7 @@ if (employee.fullName) {
 
 
 // 抽象类
+// 方法在声明的抽象类中不存在。
 abstract class Department {
 	constructor(public name: string) {}
 	printName(): void {
@@ -112,3 +113,58 @@ department = new AccountingDepartment();
 department.printName();
 department.printMeeting();
 // department.generateReports();
+
+// 高级技巧
+// class Greeter {
+//     greeting: string;
+//     constructor(message: string) {
+//         this.greeting = message;
+//     }
+//     greet() {
+//         return "Hello, " + this.greeting;
+//     }
+// }
+
+// let greeter: Greeter;
+// greeter = new Greeter("world");
+// console.log(greeter.greet());
+
+// class Greeter {
+//     static standardGreeting = "Hello, there";
+//     greeting: string;
+//     greet() {
+//         if (this.greeting) {
+//             return "Hello, " + this.greeting;
+//         }
+//         else {
+//             return Greeter.standardGreeting;
+//         }
+//     }
+// }
+
+// let greeter: Greeter;
+// greeter = new Greeter();
+// console.log(greeter.greet());
+
+// let greeterMaker: typeof Greeter = Greeter;
+// greeterMaker.standardGreeting = "Hey there!";
+
+// let greeter2: Greeter = new greeterMaker();
+// console.log(greeter2.greet());
+
+// 把类当作接口
+class Point {
+    x: number;
+    y: number;
+    constructor(x: number, y: number) {
+    	this.x = x;
+    	this.y = y;
+    }
+}
+
+interface Point3d extends Point {
+    z: number;
+}
+
+let point3d: Point3d = {x: 1, y: 2, z: 3};
+
