@@ -51,6 +51,7 @@ tom.move(34);
 
 // 参数属性：
 class Octopus {
+
 	readonly numberOfLegs: number = 8;
 	constructor(readonly name: string) {
 
