@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2019-08-26 21:12:55
 * @Last Modified by:   zgh
-* @Last Modified time: 2019-08-28 11:47:10
+* @Last Modified time: 2019-08-28 11:57:46
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -14,4 +14,4 @@
 
 ## 其他
 
-测试邮箱修改是否生效。
+测试邮箱修改是否生效..
