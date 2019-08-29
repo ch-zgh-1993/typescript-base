@@ -95,6 +95,7 @@ department.printName();
 department.printMeeting();
 // department.generateReports();
 // 高级技巧
+// 取类的类型是什么意思？？
 // class Greeter {
 //     greeting: string;
 //     constructor(message: string) {
@@ -107,25 +108,28 @@ department.printMeeting();
 // let greeter: Greeter;
 // greeter = new Greeter("world");
 // console.log(greeter.greet());
-// class Greeter {
-//     static standardGreeting = "Hello, there";
-//     greeting: string;
-//     greet() {
-//         if (this.greeting) {
-//             return "Hello, " + this.greeting;
-//         }
-//         else {
-//             return Greeter.standardGreeting;
-//         }
-//     }
-// }
-// let greeter: Greeter;
-// greeter = new Greeter();
-// console.log(greeter.greet());
-// let greeterMaker: typeof Greeter = Greeter;
-// greeterMaker.standardGreeting = "Hey there!";
-// let greeter2: Greeter = new greeterMaker();
-// console.log(greeter2.greet());
+class Greeter {
+    constructor() {
+        this.greeting = '';
+    }
+    greet() {
+        if (this.greeting) {
+            return "Hello, " + this.greeting;
+        }
+        else {
+            return Greeter.standardGreeting;
+        }
+    }
+}
+Greeter.standardGreeting = "Hello, there";
+let greeter;
+greeter = new Greeter();
+console.log(greeter.greet());
+let greeterMaker = Greeter;
+console.log(greeterMaker);
+greeterMaker.standardGreeting = "Hey there!";
+let greeter2 = new greeterMaker();
+console.log(greeter2.greet());
 // 把类当作接口
 class Point {
     constructor(x, y) {
